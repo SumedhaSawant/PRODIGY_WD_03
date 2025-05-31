@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playful Tic-Tac-Toe | MSc IT Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe 🎮</h1>
+
+    <div class="mode-select">
+      <input type="radio" id="mode-manual" name="mode" value="manual" checked />
+      <label for="mode-manual">Play Manually</label>
+
+      <input type="radio" id="mode-ai" name="mode" value="ai" />
+      <label for="mode-ai">Play vs AI</label>
+    </div>
+
+    <div class="scoreboard">
+      <div id="scoreX">X: 0</div>
+      <div id="scoreO">O: 0</div>
+    </div>
+
+    <div id="game-board" class="board" aria-label="Tic Tac Toe Board" role="grid"></div>
+
+    <div id="status" role="status" aria-live="polite"></div>
+
+    <button id="reset">Reset Game</button>
+
+    <div id="celebration" aria-hidden="true"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

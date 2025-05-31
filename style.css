@@ -1,0 +1,159 @@
+/* Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #eaeef7;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  user-select: none;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 35px 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.7rem;
+  margin-bottom: 25px;
+  color: #3b4cca;
+  user-select: none;
+}
+
+.mode-select {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.mode-select label {
+  margin: 0 18px 0 6px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mode-select input[type="radio"] {
+  cursor: pointer;
+}
+
+.mode-select input[type="radio"]:checked + label {
+  color: #3b4cca;
+  font-weight: 600;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-template-rows: repeat(3, 110px);
+  gap: 12px;
+  margin: 0 auto 30px auto;
+  user-select: none;
+}
+
+.cell {
+  background: linear-gradient(145deg, #f0f4ff, #d9e1ff);
+  border-radius: 15px;
+  border: 2px solid #c3d0ff;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #4a4a4a;
+  font-weight: 700;
+  box-shadow: 5px 5px 15px #becaff,
+              -5px -5px 15px #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 25px #a2b1ff,
+              -5px -5px 25px #dbe4ff;
+  border-color: #3b4cca;
+}
+
+.cell.x {
+  color: #3b4cca; /* bright blue */
+}
+
+.cell.o {
+  color: #e94e77; /* soft coral red */
+}
+
+.cell.win {
+  border-color: #6fcf97; /* mint green */
+  box-shadow: 0 0 18px 4px #6fcf97cc;
+}
+
+#status {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #3b4cca;
+  min-height: 28px;
+}
+
+#reset {
+  background: #3b4cca;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 12px 36px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(59, 76, 202, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+#reset:hover {
+  background: #2f3ba1;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(47, 59, 161, 0.8);
+}
+
+.scoreboard > div.active {
+  color: #3b4cca;
+  text-shadow: 0 0 8px #3b4cca88;
+  transition: color 0.3s ease;
+}
+
+/* Celebration message */
+#celebration {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6fcf97;
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  user-select: none;
+}
+
+#celebration.show {
+  opacity: 1;
+}
+
+/* Accessibility focus */
+.cell:focus-visible {
+  outline: 3px solid #3b4ccaaa;
+  outline-offset: 4px;
+}
